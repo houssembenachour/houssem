@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="871.0" prefWidth="1245.0" styleClass="a" stylesheets="@ad.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adfitness.UI.AfficherEquipementsController">
+   <right>
+      <VBox prefHeight="871.0" prefWidth="866.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="61.0" prefWidth="866.0">
+               <children>
+                  <Button fx:id="btn_imprimer" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" text="Imprimer">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Button fx:id="btn_stat" mnemonicParsing="false" text="Statistique" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tab" prefHeight="460.0" prefWidth="866.0">
+              <columns>
+                <TableColumn fx:id="libelle" prefWidth="127.0" text="libelle" />
+                <TableColumn fx:id="reference" prefWidth="148.0" text="reference" />
+                  <TableColumn fx:id="domaine" prefWidth="137.0" text="domaine" />
+                  <TableColumn fx:id="salle" prefWidth="79.0" text="salle" />
+                  <TableColumn fx:id="date" prefWidth="201.0" text="date" />
+                  <TableColumn fx:id="etat" prefWidth="248.0" text="etat" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="78.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_info" alignment="CENTER" prefHeight="30.0" prefWidth="403.0" style="-fx-background-color: grey;" textAlignment="CENTER" textFill="#2c1919">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_modif" mnemonicParsing="false" prefHeight="51.0" prefWidth="107.0" text="Modifier" textFill="#1129a4">
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="3.0" />
+                     </padding>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_supp" mnemonicParsing="false" prefHeight="51.0" prefWidth="145.0" text="Supprimer" textFill="#dd2606">
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_dup" mnemonicParsing="false" text="Dupliquer">
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_nom" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="Nom : " textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_nom" prefHeight="25.0" prefWidth="179.0" promptText="veuillez choisir un produit !!!">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_reference" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="Reference" textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_reference" prefHeight="25.0" prefWidth="179.0" promptText="veuillez choisir un produit !!!">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_domaine" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="Domaine :" textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cb_domaine" prefHeight="25.0" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="866.0" style="-fx-background-image: url(&quot;C:\Users\pc-dell\Desktop\salle.jpg&quot;);">
+               <children>
+                  <Label fx:id="lab_salle" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="salle :" textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cb_salle" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_date" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="Date :" textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_date" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="866.0">
+               <children>
+                  <Label fx:id="lab_etat" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: grey;" text="Etat :" textFill="#221312">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cb_etat" prefWidth="179.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="11.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label fx:id="lab_err" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="509.0" style="-fx-background-color: yellow;" textAlignment="CENTER" textFill="#dd0808">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="866.0">
+               <children>
+                  <Button fx:id="btn_validerm" mnemonicParsing="false" prefHeight="65.0" prefWidth="226.0" text="Valider modification" textFill="#1129a4">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_validers" mnemonicParsing="false" prefHeight="65.0" prefWidth="226.0" text="valider suppression" textFill="#dd2606">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_annuler" mnemonicParsing="false" prefHeight="69.0" prefWidth="114.0" text="annuler" textFill="#a3c307">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="80.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tf_id" prefHeight="25.0" prefWidth="29.0">
+                     <HBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="3.0" right="30.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="871.0" prefWidth="379.0" style="-fx-background-image: url('./salle.jpg');" stylesheets="@../../../../../../Desktop/ad.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lab_ajout" prefHeight="68.0" prefWidth="333.0" text="Ajouter un equipement" textAlignment="CENTER" textFill="#04ef9db2" underline="true">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lab_info_dup" alignment="CENTER" prefHeight="35.0" prefWidth="371.0" style="-fx-background-color: yellow;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_ajout_nom" prefHeight="25.0" prefWidth="319.0" promptText="Nom">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tf_ajout_reference" prefHeight="25.0" prefWidth="319.0" promptText="Reference">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <ComboBox fx:id="cb_ajout_domaine" prefHeight="25.0" prefWidth="319.0" promptText="domaine">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="cb_ajout_salle" prefHeight="25.0" prefWidth="319.0" promptText="salle">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label fx:id="lab_ajout_err" alignment="CENTER" prefHeight="95.0" prefWidth="373.0" style="-fx-background-color: yellow;" textAlignment="CENTER" textFill="#dd0808">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Aparajita Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn_ajouter" mnemonicParsing="false" prefHeight="60.0" prefWidth="136.0" text="Ajouter" textFill="#04ef9d">
+                     <HBox.margin>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_reset" mnemonicParsing="false" prefHeight="60.0" prefWidth="136.0" text="Reset" textFill="#04ef9d">
+                     <HBox.margin>
+                        <Insets right="60.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
